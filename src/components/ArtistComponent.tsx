@@ -8,7 +8,7 @@ interface ArtistListProps {
 function ArtistComponent({ artist }: ArtistListProps) {
   const navigate = useNavigate();
 
-  function navigateToDetails(id: number) {
+  function navigateToDetails(id: number): void {
     navigate(`/artists/${id}`);
   }
   // console.log(artist);

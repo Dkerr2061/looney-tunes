@@ -1,15 +1,13 @@
 import { useParams } from "react-router-dom";
 import Artist from "../Interfaces/ArtistInterface";
 import { useEffect, useState } from "react";
-interface ArtistListProps {
-  artists: Artist[];
-}
+
 interface APIProp {
   API_URL: string;
 }
 
 function ArtistDetailsPage({ API_URL }: APIProp) {
-  const [artists, setArtists] = useState<ArtistListProps[]>([]);
+  const [artists, setArtists] = useState<Artist | null>(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -25,9 +23,17 @@ function ArtistDetailsPage({ API_URL }: APIProp) {
     fetchArtistDetail();
   }, [id]);
 
-  console.log(artists);
-
-  return <div>ArtistDetailsPage</div>;
+  return (
+    <div>
+      {artists ? (
+        <div>
+          <h2>{artists.name}</h2>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
+    </div>
+  );
 }
 
 export default ArtistDetailsPage;

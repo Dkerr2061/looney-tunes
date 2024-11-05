@@ -5,8 +5,15 @@ interface ReviewListProps {
 }
 
 function AlbumReviews({ reviews }: ReviewListProps) {
-  // console.log(reviews);
-  return <div>AlbumReviews</div>;
+  return (
+    <div>
+      <ul>
+        {reviews.map((review) => (
+          <li key={review.id}>{review.text}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default AlbumReviews;
