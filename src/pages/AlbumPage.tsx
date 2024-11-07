@@ -1,4 +1,5 @@
 import Album from "../Interfaces/AlbumInterfaces";
+import AlbumComponent from "../components/AlbumComponent";
 
 interface AlbumListProps {
   albums: Album[];
@@ -7,11 +8,9 @@ interface AlbumListProps {
 function AlbumPage({ albums }: AlbumListProps) {
   return (
     <div>
-      <ul>
-        {albums.map((album) => {
-          return <li key={album.id}>{album.name}</li>;
-        })}
-      </ul>
+      {albums.map((album) => (
+        <AlbumComponent key={album.id} album={album} />
+      ))}
     </div>
   );
 }

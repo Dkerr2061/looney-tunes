@@ -13,14 +13,21 @@ function ArtistComponent({ artist }: ArtistListProps) {
   }
   // console.log(artist);
   return (
-    <ul>
-      <li key={artist.id}>
-        <p>{artist.name}</p>
-        <button onClick={() => navigateToDetails(artist.id)}>
-          View Artist Detail
-        </button>
-      </li>
-    </ul>
+    <div className="relative flex flex-col">
+      <div key={artist.id}>
+        <h1 className="text-center">{artist.name}</h1>
+      </div>
+      <div>
+        <img
+          src={artist.image}
+          alt={artist.name}
+          className="object-cover rounded-lg max-w-35 max-h-60"
+        />
+      </div>
+      <button onClick={() => navigateToDetails(artist.id)}>
+        View Artist Detail
+      </button>
+    </div>
   );
 }
 

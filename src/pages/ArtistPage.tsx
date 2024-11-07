@@ -9,7 +9,7 @@ function ArtistPage({ artists }: ArtistListProps) {
   const artistComponent = artists.map((artist) => (
     <ArtistComponent key={artist.id} artist={artist} />
   ));
-  return <div>{artistComponent}</div>;
+  return <div className="flex flex-row gap-4">{artistComponent}</div>;
 }
 
 export default ArtistPage;

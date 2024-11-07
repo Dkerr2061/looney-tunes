@@ -17,11 +17,11 @@ function ArtistDetailsPage({ API_URL }: APIProp) {
         const data = await res.json();
         setArtists(data);
       } catch (error) {
-        console.log("Artist details were not found", error);
+        console.log("Artist details were not found.", error);
       }
     };
     fetchArtistDetail();
-  }, [id]);
+  }, [id, API_URL]);
 
   return (
     <div>

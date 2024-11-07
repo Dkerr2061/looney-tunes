@@ -1,3 +1,4 @@
+import ReviewComponent from "../components/ReviewComponent";
 import Review from "../Interfaces/ReviewInterfaces";
 
 interface ReviewListProps {
@@ -7,11 +8,9 @@ interface ReviewListProps {
 function AlbumReviews({ reviews }: ReviewListProps) {
   return (
     <div>
-      <ul>
-        {reviews.map((review) => (
-          <li key={review.id}>{review.text}</li>
-        ))}
-      </ul>
+      {reviews.map((review) => (
+        <ReviewComponent key={review.id} review={review} />
+      ))}
     </div>
   );
 }
