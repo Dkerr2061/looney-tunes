@@ -22,6 +22,7 @@ import AddReview from "./pages/AddReview";
 function App() {
   // * This is where the URL for the API is being imported
   // const API_URL: string = import.meta.env.VITE_API_URL;
+  // ! Delete this API_URL  before deployment!
   const API_URL: string = "http://127.0.0.1:5000";
 
   const [artists, setArtists] = useState<ArtistListProps[]>([]);
@@ -29,6 +30,8 @@ function App() {
   const [reviews, setReviews] = useState<ReviewListProps[]>([]);
 
   // * This is where we get our artist information.
+  // TODO: Write functions for patch, post and delete
+
   useEffect(() => {
     const fetchArtists = async () => {
       try {
@@ -43,6 +46,7 @@ function App() {
   }, []);
 
   // * This is where we get our album information
+  // TODO: Write functions for patch, post and delete
 
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -58,6 +62,7 @@ function App() {
   }, []);
 
   // * This is where we get our Album Review information
+  // TODO: Write functions for patch, post and delete
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -71,10 +76,6 @@ function App() {
     };
     fetchReviews();
   }, []);
-
-  // TODO: This is to study TypeScript
-
-  // TODO
 
   // * This is where all the routes go for the app
 

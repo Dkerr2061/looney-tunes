@@ -5,12 +5,13 @@ interface ReviewProps {
 }
 
 function ReviewComponent({ review }: ReviewProps) {
-  // ! Find out how to fix this error, it is currently commented out:
-  // console.log(review.album.artist_name);
+  console.log(review.album.artist_name);
   return (
     <div>
       <div>{review.rating}</div>
       <div>{review.text}</div>
+      <div>{review.album.name}</div>
+      <div>{review.album.artist_name}</div>
     </div>
   );
 }

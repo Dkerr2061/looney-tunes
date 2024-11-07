@@ -7,6 +7,6 @@ export default interface Review {
   text: string;
   artist_id: number;
   album_id: number;
-  artist: Artist[];
-  album: Album[];
+  artist: Artist;
+  album: Album;
 }
