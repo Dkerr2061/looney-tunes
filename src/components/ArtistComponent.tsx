@@ -27,7 +27,7 @@ function ArtistComponent({ artist }: ArtistListProps) {
         </div>
         <button
           onClick={() => navigateToDetails(artist.id)}
-          className="mx-6 font-semibold shadow-lg mb-7 bg-cyan-500 shadow-cyan-500/50 rounded-xl hover:bg-black hover:text-white"
+          className="mx-6 font-semibold transition duration-300 ease-in-out shadow-lg mb-7 bg-cyan-500 shadow-cyan-500/50 rounded-xl hover:bg-black hover:text-white"
         >
           View Artist Detail
         </button>

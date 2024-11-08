@@ -11,14 +11,14 @@ function ArtistPage({ artists }: ArtistListProps) {
     <ArtistComponent key={artist.id} artist={artist} />
   ));
   return (
-    <div>
+    <>
       <div className="grid gap-10 px-6 py-6 lg:grid-cols-3 md:grid-cols-1">
         {artistComponent}
       </div>
       <div>
         <Footer />
       </div>
-    </div>
+    </>
   );
 }
 
