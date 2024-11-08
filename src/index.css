@@ -7,6 +7,7 @@
 @layer base {
   body {
     /* background-color: #88bdbc; */
+    margin: 0;
   }
 
   h1 {

@@ -4,4 +4,5 @@ export default interface Album {
   song: string;
   year: number;
   artist_name: string;
+  cover: string;
 }

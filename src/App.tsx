@@ -18,6 +18,7 @@ import ArtistDetailsPage from "./pages/ArtistDetailsPage";
 import AddAlbum from "./pages/AddAlbum";
 import AddArtist from "./pages/AddArtist";
 import AddReview from "./pages/AddReview";
+import AlbumDetailsPage from "./pages/AlbumDetailsPage";
 
 function App() {
   // * This is where the URL for the API is being imported
@@ -90,6 +91,10 @@ function App() {
         />
         <Route path="/add_artist" element={<AddArtist />} />
         <Route path="/albums" element={<AlbumPage albums={albums} />} />
+        <Route
+          path="/albums/:id"
+          element={<AlbumDetailsPage API_URL={API_URL} />}
+        />
         <Route path="/add_album" element={<AddAlbum />} />
         <Route
           path="/albumreviews"

@@ -5,7 +5,7 @@ interface ReviewProps {
 }
 
 function ReviewComponent({ review }: ReviewProps) {
-  console.log(review.album.artist_name);
+  // ? console.log(review.album.artist_name);
   return (
     <div>
       <div>{review.rating}</div>

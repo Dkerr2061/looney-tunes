@@ -13,20 +13,25 @@ function ArtistComponent({ artist }: ArtistListProps) {
   }
   // console.log(artist);
   return (
-    <div className="relative flex flex-col">
-      <div key={artist.id}>
-        <h1 className="text-center">{artist.name}</h1>
+    <div className="border-2 border-black rounded-md shadow-lg">
+      <div className="flex flex-col">
+        <div className="">
+          <img
+            src={artist.image}
+            alt={artist.name}
+            className="object-center w-full rounded-b-sm"
+          />
+        </div>
+        <div key={artist.id}>
+          <h1 className="text-center">{artist.name}</h1>
+        </div>
+        <button
+          onClick={() => navigateToDetails(artist.id)}
+          className="mx-6 font-semibold shadow-lg mb-7 bg-cyan-500 shadow-cyan-500/50 rounded-xl hover:bg-black hover:text-white"
+        >
+          View Artist Detail
+        </button>
       </div>
-      <div>
-        <img
-          src={artist.image}
-          alt={artist.name}
-          className="object-cover rounded-lg max-w-35 max-h-60"
-        />
-      </div>
-      <button onClick={() => navigateToDetails(artist.id)}>
-        View Artist Detail
-      </button>
     </div>
   );
 }
