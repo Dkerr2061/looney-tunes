@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="flex flex-row items-center">
+    <header className="flex flex-row items-center w-full">
       <div className="flex flex-auto items-center justify-between py-4 pl-10 border-b-2 border-black border-solid bg-[#ADD8E6] shadow-lg">
         <div className="flex flex-1 font-['Tiny5'] text-6xl text-nowrap pr-[-2px] w-full">
           <NavLink to="/">Looney Tunes</NavLink>

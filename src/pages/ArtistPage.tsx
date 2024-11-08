@@ -15,9 +15,7 @@ function ArtistPage({ artists }: ArtistListProps) {
       <div className="grid gap-10 px-6 py-6 lg:grid-cols-3 md:grid-cols-1">
         {artistComponent}
       </div>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }
