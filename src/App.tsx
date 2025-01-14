@@ -22,9 +22,9 @@ import AlbumDetailsPage from "./pages/AlbumDetailsPage";
 
 function App() {
   // * This is where the URL for the API is being imported
-  // const API_URL: string = import.meta.env.VITE_API_URL;
+  const API_URL: string = import.meta.env.VITE_API_URL;
   // ! Delete this API_URL  before deployment!
-  const API_URL: string = "http://127.0.0.1:5000";
+  // const API_URL: string = "http://127.0.0.1:5000";
 
   const [artists, setArtists] = useState<ArtistListProps[]>([]);
   const [albums, setAlbums] = useState<AlbumListProps[]>([]);
